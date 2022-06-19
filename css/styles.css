@@ -9,6 +9,7 @@
   --clr-font-3: #ffffff;
   --clr-font-4: rgba(255, 255, 255, 0.6);
   --clr-border-1: #eeeeee;
+  --clr-border-2: #ececec;
   --ff-1: "Raleway", sans-serif;
   --ff-2: "Roboto", sans-serif;
 }
@@ -52,6 +53,7 @@ header,
 
 header {
   background-color: var(--clr-font-3);
+  border-bottom: 1px solid #ececec;
 }
 
 .header-main {
@@ -241,4 +243,66 @@ footer {
   line-height: 1.7;
   display: block;
   margin-bottom: 9px;
+}
+
+/* Portfolio items */
+
+.main-filter-buttons {
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-top: 94px;
+}
+
+.main-button {
+  background-color: var(--clr-background-2);
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+}
+
+.main-button:not(:last-child) {
+  margin-right: 15.3px;
+}
+
+.main-button:hover,
+.main-button:active {
+  color: var(--clr-font-3);
+  background-color: var(--clr-active-1);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* portfolio items */
+
+.main-items {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  gap: 30px 30px;
+  justify-content: center;
+  padding-bottom: 94px;
+}
+
+.item {
+  height: 404px;
+  background-color: var(--clr-font-3);
+  border: 1px solid #eeeeee;
+}
+
+.item-description h4 {
+  font-size: 1.125rem;
+  line-height: 2;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 20px 24px 4px;
+}
+.item-description p {
+  color: var(--clr-font-2);
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 0 24px 20px;
 }
