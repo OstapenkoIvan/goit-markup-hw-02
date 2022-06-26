@@ -261,7 +261,7 @@ li {
 footer {
   height: 252px;
   background-color: var(--clr-background-1);
-  padding-top: 60px;
+  /* padding-top: 60px; */
   padding-bottom: 60px;
 }
 
