@@ -130,6 +130,10 @@ li {
 
 /* section one */
 
+.hide {
+  display: none;
+}
+
 .section-one {
   background-color: var(--clr-background-1);
   color: var(--clr-font-3);
