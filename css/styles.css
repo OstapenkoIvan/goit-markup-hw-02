@@ -25,7 +25,6 @@ html {
 ::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -37,7 +36,7 @@ body {
 a {
   font-family: var(--ff-2);
   text-decoration: none;
-  color: var(--clr-font-1);
+  color: inherit;
   font-weight: 500;
   line-height: 1.143;
 }
@@ -48,6 +47,13 @@ ul {
 
 img {
   display: block;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
 }
 
 h2,
@@ -122,17 +128,20 @@ li {
   padding-bottom: 32px;
 }
 
+.nav-active {
+  color: var(--clr-active-1);
+}
+
 .header-contact:hover,
+.header-contact:focus,
 .header-btn a:hover,
-.footer-contact:hover {
+.header-btn a:focus,
+.footer-contact:hover,
+.footer-contact:focus {
   color: var(--clr-active-1);
 }
 
 /* section one */
-
-.hide {
-  display: none;
-}
 
 .section-one {
   background-color: var(--clr-background-1);
@@ -160,16 +169,22 @@ li {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.8;
+  cursor: pointer;
 }
 
-.section-button:hover {
+.section-button:hover,
+.section-button:focus {
   background-color: var(--clr-hover-2);
 }
 
 /* section two */
 
+.hide {
+  display: none;
+}
+
 .section-two {
-  margin-top: var(--section-margin);
+  padding-top: var(--section-margin);
 }
 
 .section-two + .section-two {
@@ -213,8 +228,6 @@ li {
 
 .section-two-images {
   display: flex;
-  /* justify-content: center; */
-  /* margin-bottom: var(--section-margin); */
 }
 
 .section-two-images li:not(:last-child) {
@@ -264,7 +277,7 @@ li {
   color: var(--clr-font-2);
 }
 
-/* footer */
+/* FOOTER */
 
 footer {
   height: 252px;
@@ -283,21 +296,15 @@ footer {
   color: var(--clr-font-3);
 }
 
-.footer-address {
+.footer-contact {
+  color: var(--clr-font-4);
+  font-style: normal;
   line-height: 1.71;
   font-weight: 400;
 }
 
 .footer-street {
   color: var(--clr-font-3);
-  line-height: 1.71;
-  font-weight: 400;
-}
-
-.footer-contact {
-  color: var(--clr-font-4);
-  line-height: 1.71;
-  font-weight: 400;
 }
 
 .footer-list-item:not(:last-child) {
@@ -305,6 +312,11 @@ footer {
 }
 
 /* Portfolio items */
+
+.main-items {
+  padding-bottom: var(--section-margin);
+  padding-top: var(--section-margin);
+}
 
 .main-buttons-container {
   border-top: 1px solid #ececec;
@@ -333,15 +345,11 @@ footer {
 }
 
 .main-button:hover,
-.main-button:active {
+.main-button:focus {
   color: var(--clr-font-3);
   background-color: var(--clr-active-1);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.main-items {
-  padding-bottom: var(--section-margin);
 }
 
 .main-item-list {
@@ -369,14 +377,16 @@ footer {
   margin-bottom: 20px;
 }
 
-.item h3 {
+.item-header {
   font-size: 18px;
   line-height: 2;
   font-weight: 700;
   letter-spacing: 0.06em;
   margin-left: 24px;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
+
 .item p {
   color: var(--clr-font-2);
   font-size: 16px;
